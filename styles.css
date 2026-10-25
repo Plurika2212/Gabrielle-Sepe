@@ -1,0 +1,217 @@
+/* ==========================================================================
+   Base Styles & Reset
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  background-color: #f0f2f5;
+  color: #2c3e50;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* ==========================================================================
+   Main Container
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: 960px;
+  background: #f8f9fa;
+  border-radius: 24px;
+  padding: 50px 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+/* ==========================================================================
+   Header Section
+   ========================================================================== */
+.header-section {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 50px auto;
+}
+
+.sub-heading {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #333333;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.main-heading {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #0b41d1;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.bio-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555555;
+  margin-bottom: 25px;
+}
+
+.attribution {
+  font-size: 0.85rem;
+  color: #666666;
+}
+
+.attribution a {
+  color: #333333;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Profile & Cards Grid Layout
+   ========================================================================== */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+@media (min-width: 768px) {
+  .profile-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ==========================================================================
+   Left Royal Blue Profile Card
+   ========================================================================== */
+.blue-card {
+  background-color: #0b41d1;
+  border-radius: 4px;
+  padding: 45px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(11, 65, 209, 0.15);
+}
+
+.avatar-container {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 35px;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+}
+
+.avatar-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-headline {
+  font-size: 1.85rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 40px;
+  max-width: 320px;
+}
+
+.btn-outline {
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  color: #ffffff;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  background-color: #ffffff;
+  color: #0b41d1;
+}
+
+/* ==========================================================================
+   Right 2x2 Services Grid
+   ========================================================================== */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+@media (min-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Individual Service Cards */
+.service-card {
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 35px 25px 25px 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 230px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.icon-box {
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+}
+
+.service-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #333333;
+  letter-spacing: 0.5px;
+  margin-bottom: 25px;
+}
+
+.more-link {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #333333;
+  text-decoration: underline;
+  letter-spacing: 1px;
+  margin-top: auto;
+}
+
+/* Icon & Border Theme Colors */
+.color-orange  { color: #f2994a; }
+.color-cyan    { color: #20c997; }
+.color-blue    { color: #2f80ed; }
+.color-yellow  { color: #f2c94c; }
+
+.border-orange { border-bottom: 5px solid #f2994a; }
+.border-cyan   { border-bottom: 5px solid #20c997; }
+.border-blue   { border-bottom: 5px solid #0b41d1; }
+.border-yellow { border-bottom: 5px solid #f2c94c; }
